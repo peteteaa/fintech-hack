@@ -1,0 +1,37 @@
+{
+  "portfolios": [
+    {
+      "name": "Conservative Investor",
+      "risk_level": "low",
+      "asset_allocation": {
+        "Stocks": 20,
+        "Bonds": 60,
+        "Cash": 15,
+        "Crypto": 0,
+        "ETF": 5
+      }
+    },
+    {
+      "name": "Balanced Growth",
+      "risk_level": "medium",
+      "asset_allocation": {
+        "Stocks": 50,
+        "Bonds": 30,
+        "Cash": 5,
+        "Crypto": 5,
+        "ETF": 10
+      }
+    },
+    {
+      "name": "Aggressive Growth",
+      "risk_level": "high",
+      "asset_allocation": {
+        "Stocks": 70,
+        "Bonds": 10,
+        "Cash": 5,
+        "Crypto": 10,
+        "ETF": 5
+      }
+    }
+  ]
+}
