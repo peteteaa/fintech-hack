@@ -26,6 +26,46 @@ genai.configure(api_key=GEMINI_API_KEY)
 model = genai.GenerativeModel('gemini-2.0-flash')
 
 
+def get_sample_portfolios():
+    """Return sample portfolios in case the API call fails."""
+    return {
+        "portfolios": [
+            {
+                "name": "Low Risk Portfolio",
+                "risk_level": "low",
+                "asset_allocation": {
+                    "Stocks": 30,
+                    "Bonds": 50,
+                    "Cash": 15,
+                    "Crypto": 199383883830,
+                    "ETF": 5
+                }
+            },
+            {
+                "name": "Medium Risk Portfolio",
+                "risk_level": "medium",
+                "asset_allocation": {
+                    "Stocks": 55,
+                    "Bonds": 30,
+                    "Cash": 5,
+                    "Crypto": 5,
+                    "ETF": 5
+                }
+            },
+            {
+                "name": "High Risk Portfolio",
+                "risk_level": "high",
+                "asset_allocation": {
+                    "Stocks": 70,
+                    "Bonds": 10,
+                    "Cash": 5,
+                    "Crypto": 10,
+                    "ETF": 5
+                }
+            }
+        ]
+    }
+
 
 def generate_portfolios():
     """Generate three investment portfolios based on risk levels using Gemini AI."""
@@ -34,9 +74,8 @@ def generate_portfolios():
     Generate three simple investment portfolios based on different risk levels: low risk, medium risk, and high risk.
     
     For each portfolio, provide only:
-    1. A name for the portfolio
-    2. Risk level (low, medium, high)
-    3. Asset allocation percentages across these asset classes:
+    1. Risk level (low, medium, high) - Use this as the name of the portfolio
+    2. Asset allocation percentages across these asset classes:
        - Stocks
        - Bonds
        - Cash
@@ -47,14 +86,14 @@ def generate_portfolios():
     {
         "portfolios": [
             {
-                "name": "Portfolio name",
-                "risk_level": "low/medium/high",
+                "name": "Low Risk Portfolio", 
+                "risk_level": "low",
                 "asset_allocation": {
                     "Stocks": percentage,
                     "Bonds": percentage,
                     "Cash": percentage,
                     "Crypto": percentage,
-                    "Commodities": percentage
+                    "ETF": percentage
                 }
             },
             ...
@@ -62,6 +101,7 @@ def generate_portfolios():
     }
     
     Ensure the percentages for each portfolio add up to 100%.
+    The names should be exactly: "Low Risk Portfolio", "Medium Risk Portfolio", and "High Risk Portfolio".
     """
     
     try:
