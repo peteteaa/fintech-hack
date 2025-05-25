@@ -102,6 +102,7 @@ def generate_portfolios():
     
     Ensure the percentages for each portfolio add up to 100%.
     The names should be exactly: "Low Risk Portfolio", "Medium Risk Portfolio", and "High Risk Portfolio".
+Ensure the asset allocation of each individual portfolio (low, medium, high) changes every time.
     """
     
     try:

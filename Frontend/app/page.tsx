@@ -9,22 +9,22 @@ import Link from "next/link"
 
 export default function LandingPage() {
   const [isVisible, setIsVisible] = useState(false)
-  const [userCount, setUserCount] = useState(0)
+  // const [userCount, setUserCount] = useState(0)
 
   useEffect(() => {
     setIsVisible(true)
     // Animate user count
-    const timer = setInterval(() => {
-      setUserCount((prev) => {
-        if (prev < 12847) {
-          return prev + Math.floor(Math.random() * 100) + 50
-        }
-        return 12847
-      })
-    }, 100)
+    // const timer = setInterval(() => {
+    //   setUserCount((prev) => {
+    //     if (prev < 12847) {
+    //       return prev + Math.floor(Math.random() * 100) + 50
+    //     }
+    //     return 12847
+    //   })
+    // }, 100)
 
-    setTimeout(() => clearInterval(timer), 2000)
-    return () => clearInterval(timer)
+    // setTimeout(() => clearInterval(timer), 2000)
+    // return () => clearInterval(timer)
   }, [])
 
   return (
@@ -74,32 +74,13 @@ export default function LandingPage() {
               isVisible ? "translate-y-0 opacity-100" : "translate-y-10 opacity-0"
             }`}
           >
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
+            <div className="flex justify-center mb-12">
               <Link href="/invest">
                 <Button size="lg" className="text-lg px-8 py-3 hover:scale-105 transition-transform">
                   Create My Portfolio
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
               </Link>
-              <Button variant="outline" size="lg" className="text-lg px-8 py-3 hover:scale-105 transition-transform">
-                Watch Demo
-              </Button>
-            </div>
-
-            {/* Live Stats */}
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl mx-auto mb-8">
-              <div className="text-center p-4 bg-white/50 dark:bg-gray-800/50 rounded-lg backdrop-blur transition-colors">
-                <div className="text-2xl font-bold text-blue-600 dark:text-blue-400">{userCount.toLocaleString()}+</div>
-                <div className="text-sm text-gray-600 dark:text-gray-300">Active Investors</div>
-              </div>
-              <div className="text-center p-4 bg-white/50 dark:bg-gray-800/50 rounded-lg backdrop-blur transition-colors">
-                <div className="text-2xl font-bold text-green-600 dark:text-green-400">$2.4B+</div>
-                <div className="text-sm text-gray-600 dark:text-gray-300">Assets Managed</div>
-              </div>
-              <div className="text-center p-4 bg-white/50 dark:bg-gray-800/50 rounded-lg backdrop-blur transition-colors">
-                <div className="text-2xl font-bold text-purple-600 dark:text-purple-400">12.3%</div>
-                <div className="text-sm text-gray-600 dark:text-gray-300">Avg. Annual Return</div>
-              </div>
             </div>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-6 text-sm text-gray-500 dark:text-gray-400">

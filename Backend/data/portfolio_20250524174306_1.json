@@ -1,0 +1,23 @@
+{
+  "portfolio_id": "portfolio_20250524174306_1",
+  "portfolio_data": {
+    "portfolio_name": "Medium Risk Portfolio",
+    "risk_level": "medium",
+    "investment_amount": "1000002234",
+    "allocation": "50% Stocks, 30% Bonds, 10% Cryptocurrency, 10% ETFs",
+    "response_json": {
+      "success": true,
+      "message": "Portfolio generated and stored successfully",
+      "data": {
+        "portfolio_id": "7251184c-1779-4484-a277-6c922b67121a",
+        "portfolio_name": "Medium Risk Portfolio",
+        "risk_level": "medium",
+        "investment_amount": "1000002234",
+        "allocation": "50% Stocks, 30% Bonds, 10% Cryptocurrency, 10% ETFs",
+        "response_json": {
+          "raw_text": "Based on your investment portfolio breakdown of 50% Stocks, 30% Bonds, 10% Cryptocurrency, and 10% ETFs, here are some recommendations for each category:\n\n### 1. **Stocks (50% of $1,000,000 = $500,000)**\n- **Top-Performing Stocks of 2023**:\n  - **Nvidia (NVDA)**: Gained 167.5% recently.\n  - **Palantir (PLTR)**: Strong performance noted.\n  - **Other Recommendations**: \n    - **Booking Holdings (BKNG)**\n    - **Broadcom (AVGO)**\n    - **Boston Scientific (BSX)**\n    - **TJX Companies (TJX)**\n    - **EQT Corporation (EQT)**\n\n  For more details, you can check the full list [here](https://www.morningstar.com/stocks/top-performing-stocks-2023).\n\n### 2. **Bonds (30% of $1,000,000 = $300,000)**\n- **Best Bond ETFs**:\n  - **Vanguard Ultra-Short Bond ETF (VUSB)**\n  - **DoubleLine Commercial Real Estate ETF (DCRE)**\n  - **Roundhill Weekly T-Bill ETF (WEEK)**\n  - **iShares Intermediate-Term Corporate Bond ETF (IGIB)**\n\n  You can explore more options in this article [here](https://money.usnews.com/investing/articles/best-bond-etfs-to-buy-now).\n\n### 3. **Cryptocurrency (10% of $1,000,000 = $100,000)**\n- **Top Cryptocurrencies to Invest In**:\n  - **Bitcoin (BTC)**\n  - **Ethereum (ETH)**\n  - **Binance Coin (BNB)**\n  - **Solana (SOL)**\n  - **Ripple (XRP)**\n\n  For a comprehensive list, refer to this source [here](https://www.forbes.com/advisor/investing/cryptocurrency/top-10-cryptocurrencies/).\n\n### 4. **ETFs (10% of $1,000,000 = $100,000)**\n- While specific ETF recommendations weren't retrieved, you can consider looking into popular ETFs that track major indices or sectors, such as:\n  - **SPDR S&P 500 ETF Trust (SPY)**\n  - **Vanguard Total Stock Market ETF (VTI)**\n  - **iShares Russell 2000 ETF (IWM)**\n\n### Summary of Investment Allocation:\n- **Stocks**: $500,000\n- **Bonds**: $300,000\n- **Cryptocurrency**: $100,000\n- **ETFs**: $100,000\n\nMake sure to conduct further research or consult with a financial advisor to tailor these investments to your specific financial goals and risk tolerance."
+        }
+      }
+    }
+  }
+}

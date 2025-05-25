@@ -30,8 +30,9 @@ export default function InvestPage() {
 
   const handleContinue = () => {
     if (investmentAmount && Number.parseFloat(investmentAmount) > 0) {
-      // Navigate to portfolio options page
-      window.location.href = "/portfolio-options"
+      // Navigate to portfolio options page with the investment amount as a query parameter
+      window.location.href = `/portfolio-options?amount=${encodeURIComponent(investmentAmount)}`
+      console.log(`Navigating to portfolio options with investment amount: ${investmentAmount}`)
     }
   }
 

@@ -1,0 +1,23 @@
+{
+  "portfolio_id": "portfolio_20250524171647_1",
+  "portfolio_data": {
+    "portfolio_name": "Medium Risk Portfolio",
+    "risk_level": "medium",
+    "investment_amount": "100000",
+    "allocation": "50% Stocks, 30% Bonds, 10% Cryptocurrency, 10% ETFs",
+    "response_json": {
+      "success": true,
+      "message": "Portfolio generated and stored successfully",
+      "data": {
+        "portfolio_id": "b494c184-b076-4a29-88f0-9b7179e222fe",
+        "portfolio_name": "Medium Risk Portfolio",
+        "risk_level": "medium",
+        "investment_amount": "100000",
+        "allocation": "50% Stocks, 30% Bonds, 10% Cryptocurrency, 10% ETFs",
+        "response_json": {
+          "raw_text": "Here's a suggested investment breakdown for your $100,000 portfolio based on the specified allocations:\n\n### 1. **Stocks (50% - $50,000)**\n   - **Top Performers**:\n     - **Nvidia (NVDA)**: Gained 167.5% recently.\n     - **Palantir (PLTR)**: Strong performance in 2023.\n   - **Source**: [Morningstar - Top-Performing Stocks of 2023](https://www.morningstar.com/stocks/top-performing-stocks-2023)\n\n### 2. **Bonds (30% - $30,000)**\n   - **Recommended Bond ETFs**:\n     - **Vanguard Ultra-Short Bond ETF (VUSB)**\n     - **DoubleLine Commercial Real Estate ETF (DCRE)**\n     - **iShares Intermediate Government/Credit Bond ETF (GVI)**\n   - **Source**: [US News - Best Bond ETFs to Buy for 2025](https://money.usnews.com/investing/articles/best-bond-etfs-to-buy-now)\n\n### 3. **Cryptocurrency (10% - $10,000)**\n   - **Top Cryptocurrencies**:\n     - **Bitcoin (BTC)**\n     - **Ethereum (ETH)**\n     - **Binance Coin (BNB)**\n   - **Source**: [Forbes - Top 10 Cryptocurrencies](https://www.forbes.com/advisor/investing/cryptocurrency/top-10-cryptocurrencies/)\n\n### 4. **ETFs (10% - $10,000)**\n   - Consider investing in a diversified ETF that tracks a broad market index, such as:\n     - **SPDR S&P 500 ETF Trust (SPY)**\n     - **Vanguard Total Stock Market ETF (VTI)**\n\nThis portfolio breakdown provides a balanced approach to investing, with a mix of growth potential from stocks and cryptocurrencies, along with the stability of bonds and ETFs. Always consider consulting with a financial advisor to tailor the investments to your specific financial goals and risk tolerance."
+        }
+      }
+    }
+  }
+}

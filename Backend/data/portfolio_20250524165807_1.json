@@ -1,0 +1,23 @@
+{
+  "id": "portfolio_20250524165807_1",
+  "created_at": "2025-05-24T16:58:07.840180",
+  "portfolio_data": {
+    "portfolio_name": "High Risk Portfolio",
+    "risk_level": "high",
+    "investment_amount": "100000",
+    "allocation": "70% Stocks, 10% Bonds, 5% Cash, 10% Crypto, 5% ETF",
+    "response_json": {
+      "success": true,
+      "message": "API call successful using requests library",
+      "data": {
+        "portfolio_name": "High Risk Portfolio",
+        "risk_level": "high",
+        "investment_amount": "100000",
+        "allocation": "70% Stocks, 10% Bonds, 5% Cash, 10% Crypto, 5% ETF",
+        "response_json": {
+          "raw_text": "Based on the current investment landscape, here's a suggested portfolio breakdown for your $100,000 investment, following your specified allocation:\n\n### 1. **Stocks (70% - $70,000)**\n   - **Top Performers**:\n     - **Nvidia (NVDA)**: Known for its strong performance in the tech sector, particularly in AI and gaming.\n     - **Palantir Technologies (PLTR)**: Gained significant traction and is recognized for its data analytics capabilities.\n   - **Source**: [Morningstar - Top-Performing Stocks of 2023](https://www.morningstar.com/stocks/top-performing-stocks-2023)\n\n### 2. **Bonds (10% - $10,000)**\n   - **Recommended Bond ETFs**:\n     - **Vanguard Ultra-Short Bond ETF (VUSB)**: A solid choice for conservative investors looking for stability.\n     - **DoubleLine Commercial Real Estate ETF (DCRE)**: Focuses on commercial real estate bonds, providing diversification.\n   - **Source**: [Money - Best Bond ETFs to Buy for 2025](https://money.usnews.com/investing/articles/best-bond-etfs-to-buy-now)\n\n### 3. **Cash (5% - $5,000)**\n   - Keep this amount in a high-yield savings account or a money market account for liquidity and safety.\n\n### 4. **Cryptocurrency (10% - $10,000)**\n   - **Top Cryptocurrencies**:\n     - **Bitcoin (BTC)**: The leading cryptocurrency with a strong market presence.\n     - **Ethereum (ETH)**: Known for its smart contract functionality and widespread adoption.\n     - **Binance Coin (BNB)**: A popular choice due to its utility on the Binance exchange.\n   - **Source**: [Forbes - Top 10 Cryptocurrencies](https://www.forbes.com/advisor/investing/cryptocurrency/top-10-cryptocurrencies/)\n\n### 5. **ETFs (5% - $5,000)**\n   - Consider investing in a diversified ETF that tracks a broad market index, such as the **SPDR S&P 500 ETF Trust (SPY)** or **Vanguard Total Stock Market ETF (VTI)**, to gain exposure to a wide range of stocks.\n\n### Summary of Investment Allocation:\n- **Stocks**: $70,000\n- **Bonds**: $10,000\n- **Cash**: $5,000\n- **Cryptocurrency**: $10,000\n- **ETFs**: $5,000\n\nThis diversified approach balances growth potential with risk management, aligning with your investment strategy. Always consider consulting with a financial advisor to tailor the portfolio to your specific needs and risk tolerance."
+        }
+      }
+    }
+  }
+}

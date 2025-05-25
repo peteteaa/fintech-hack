@@ -1,0 +1,23 @@
+{
+  "portfolio_id": "portfolio_20250524171225_0",
+  "portfolio_data": {
+    "portfolio_name": "Medium Risk Portfolio",
+    "risk_level": "medium",
+    "investment_amount": "100000",
+    "allocation": "50% Stocks, 30% Bonds, 10% Cryptocurrency, 10% ETFs",
+    "response_json": {
+      "success": true,
+      "message": "Portfolio generated and stored successfully",
+      "data": {
+        "portfolio_id": "eb339d61-57be-4f71-9ac6-fe9975a20c90",
+        "portfolio_name": "Medium Risk Portfolio",
+        "risk_level": "medium",
+        "investment_amount": "100000",
+        "allocation": "50% Stocks, 30% Bonds, 10% Cryptocurrency, 10% ETFs",
+        "response_json": {
+          "raw_text": "Here's a breakdown of potential investments based on your portfolio allocation of $100,000, which includes 50% in stocks, 30% in bonds, 10% in cryptocurrency, and 10% in ETFs.\n\n### 1. **Stocks (50% - $50,000)**\nBased on the latest information, here are some top-performing stocks to consider:\n- **Nvidia (NVDA)**: Gained 167.5% recently.\n- **Palantir (PLTR)**: Also performed well in the market.\n- **Meta Platforms (META)**: A strong growth stock in the tech sector.\n- **Salesforce (CRM)**: Another solid choice in software.\n\nFor more details, you can check the full list of top-performing stocks [here](https://www.morningstar.com/stocks/top-performing-stocks-2023).\n\n### 2. **Bonds (30% - $30,000)**\nHere are some recommended bond funds and ETFs:\n- **Vanguard Ultra-Short Bond ETF (VUSB)**\n- **DoubleLine Commercial Real Estate ETF (DCRE)**\n- **American Funds Bond Fund of America (ABNFX)**\n- **American Funds Limited-Term Tax-Exempt Bond (LTEFX)**\n\nYou can explore more about these options [here](https://money.usnews.com/investing/articles/best-bond-etfs-to-buy-now).\n\n### 3. **Cryptocurrency (10% - $10,000)**\nConsider investing in the following cryptocurrencies:\n- **Bitcoin (BTC)**\n- **Ethereum (ETH)**\n- **Binance Coin (BNB)**\n- **Solana (SOL)**\n- **Ripple (XRP)**\n\nFor a detailed list of top cryptocurrencies, you can refer to this article [here](https://www.forbes.com/advisor/investing/cryptocurrency/top-10-cryptocurrencies/).\n\n### 4. **ETFs (10% - $10,000)**\nWhile specific ETFs weren't highlighted in the search results, you can consider investing in broad market ETFs or sector-specific ETFs that align with your investment goals. Look for ETFs that track indices or sectors you believe will perform well.\n\n### Summary of Portfolio Allocation:\n- **Stocks**: $50,000\n- **Bonds**: $30,000\n- **Cryptocurrency**: $10,000\n- **ETFs**: $10,000\n\nMake sure to conduct further research or consult with a financial advisor to tailor these investments to your specific financial situation and risk tolerance."
+        }
+      }
+    }
+  }
+}

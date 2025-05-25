@@ -1,0 +1,20 @@
+{
+  "id": "portfolio_20250524164223_0",
+  "created_at": "2025-05-24T16:42:23.612413",
+  "portfolio_data": {
+    "portfolio_name": "High Risk Portfolio",
+    "risk_level": "high",
+    "investment_amount": "100000",
+    "allocation": "70% Stocks, 10% Bonds, 15% Crypto, 5% ETF",
+    "response_json": {
+      "success": true,
+      "message": "API call successful using requests library",
+      "data": {
+        "portfolio_name": "High Risk Portfolio",
+        "risk_level": "high",
+        "investment_amount": "100000",
+        "allocation": "70% Stocks, 10% Bonds, 15% Crypto, 5% ETF"
+      }
+    }
+  }
+}

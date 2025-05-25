@@ -1,0 +1,23 @@
+{
+  "portfolio_id": "portfolio_20250524173312_3",
+  "portfolio_data": {
+    "portfolio_name": "High Risk Portfolio",
+    "risk_level": "high",
+    "investment_amount": "100000",
+    "allocation": "70% Stocks, 10% Bonds, 15% Cryptocurrency, 5% ETFs",
+    "response_json": {
+      "success": true,
+      "message": "Portfolio generated and stored successfully",
+      "data": {
+        "portfolio_id": "bc019b64-eab5-4512-9090-14478d0744de",
+        "portfolio_name": "High Risk Portfolio",
+        "risk_level": "high",
+        "investment_amount": "100000",
+        "allocation": "70% Stocks, 10% Bonds, 15% Cryptocurrency, 5% ETFs",
+        "response_json": {
+          "raw_text": "Based on the portfolio breakdown of 70% Stocks, 10% Bonds, 15% Cryptocurrency, and 5% ETFs, here are some investment options for a starting amount of $100,000:\n\n### 1. **Stocks (70% - $70,000)**\n   - **Top Performers:**\n     - **Nvidia (NVDA)**: Gained 167.5% recently.\n     - **Palantir (PLTR)**: Strong performance in the tech sector.\n     - **Booking Holdings (BKNG)**: A prime candidate for growth.\n     - **Broadcom (AVGO)**: Solid technology stock.\n     - **Boston Scientific (BSX)**: A healthcare stock with growth potential.\n   - **Sources:**\n     - [Morningstar - Top-Performing Stocks of 2023](https://www.morningstar.com/stocks/top-performing-stocks-2023)\n     - [Investor's Business Daily - Best Stocks to Buy Now](https://www.investors.com/research/best-stocks-to-buy-now/)\n\n### 2. **Bonds (10% - $10,000)**\n   - **Recommended Bond ETFs:**\n     - **Vanguard Ultra-Short Bond ETF (VUSB)**: A low-risk option.\n     - **DoubleLine Commercial Real Estate ETF (DCRE)**: Focuses on commercial real estate.\n     - **iShares Intermediate Government/Credit Bond ETF (IGOV)**: A mix of government and corporate bonds.\n   - **Sources:**\n     - [Money - Best Bond ETFs to Buy for 2025](https://money.usnews.com/investing/articles/best-bond-etfs-to-buy-now)\n\n### 3. **Cryptocurrency (15% - $15,000)**\n   - **Top Cryptocurrencies:**\n     - **Bitcoin (BTC)**: The leading cryptocurrency.\n     - **Ethereum (ETH)**: Known for its smart contract functionality.\n     - **Binance Coin (BNB)**: A popular choice among investors.\n     - **Solana (SOL)**: Gaining traction for its speed and low fees.\n     - **Ripple (XRP)**: Known for its use in cross-border payments.\n   - **Sources:**\n     - [Forbes - Top 10 Cryptocurrencies Of April 2025](https://www.forbes.com/advisor/investing/cryptocurrency/top-10-cryptocurrencies/)\n\n### 4. **ETFs (5% - $5,000)**\n   - Consider investing in a diversified ETF that tracks a broad market index, such as the **S&P 500 ETF (SPY)** or a sector-specific ETF based on your interests.\n\n### Summary of Investment Allocation:\n- **Stocks**: $70,000\n- **Bonds**: $10,000\n- **Cryptocurrency**: $15,000\n- **ETFs**: $5,000\n\nThis diversified approach allows you to balance risk and potential returns across different asset classes. Always consider consulting with a financial advisor to tailor your investments to your specific financial goals and risk tolerance."
+        }
+      }
+    }
+  }
+}

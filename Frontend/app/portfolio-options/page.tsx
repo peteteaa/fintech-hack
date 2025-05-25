@@ -108,8 +108,25 @@ export default function PortfolioOptionsPage() {
   const [submissionResult, setSubmissionResult] = useState<any>(null);
   const [apiResponse, setApiResponse] = useState<any>(null);
   const [showApiResponse, setShowApiResponse] = useState<boolean>(false);
+  const [investmentAmount, setInvestmentAmount] = useState<string>("2000");
   const [generatedPortfolios, setGeneratedPortfolios] = useState<GeneratedPortfolio[]>([]);
   const [portfolioOptions, setPortfolioOptions] = useState<PortfolioOption[]>([]);
+
+  // Get the investment amount from the URL query parameter
+  useEffect(() => {
+    // Check if we're in the browser
+    if (typeof window !== 'undefined') {
+      const urlParams = new URLSearchParams(window.location.search);
+      const amountParam = urlParams.get('amount');
+      
+      if (amountParam) {
+        console.log(`Retrieved investment amount from URL: ${amountParam}`);
+        setInvestmentAmount(amountParam);
+      } else {
+        console.log('No investment amount found in URL, using default');
+      }
+    }
+  }, []);
 
   // Fetch the generated portfolios data
   useEffect(() => {
@@ -257,8 +274,8 @@ export default function PortfolioOptionsPage() {
             .map(([asset, percentage]) => `${percentage}% ${asset}`)
             .join(', ');
           
-          // Default investment amount - could be customized in the future
-          const investmentAmount = "2000";
+          // Use the investment amount from state (which comes from the URL query parameter)
+          console.log(`Using investment amount from state: ${investmentAmount}`);
           
           // Enhanced debugging for API calls
           console.log('\n==== TOOLHOUSE API CALL FROM FRONTEND (SELECTION) ====');
@@ -330,8 +347,8 @@ export default function PortfolioOptionsPage() {
               .map(([asset, percentage]) => `${percentage}% ${asset}`)
               .join(', ');
             
-            // Default investment amount - could be customized in the future
-            const investmentAmount = "2000";
+            // Use the investment amount from state (which comes from the URL query parameter)
+            console.log(`Using investment amount from state for API call: ${investmentAmount}`);
             
             // Call the test API endpoint with enhanced debugging
             console.log('\n==== TOOLHOUSE API CALL FROM FRONTEND (CONTINUE BUTTON) ====');
@@ -348,7 +365,7 @@ export default function PortfolioOptionsPage() {
             console.log("Calling test API endpoint...");
             setIsSubmitting(true);
             
-            const response = await fetch('http://localhost:8000/api/test-api', {
+            const response = await fetch('http://localhost:8000/api/generate-portfolio', {
               method: 'POST',
               headers: {
                 'Content-Type': 'application/json',
@@ -370,9 +387,79 @@ export default function PortfolioOptionsPage() {
             if (result.success) {
               console.log("Test API call successful for portfolio!");
               console.log("Test API result:", result);
+              
+              // Extract the Toolhouse API response body and run ID
+              const toolhouseRunId = response.headers.get('X-Toolhouse-Run-Id') || '';
+              console.log('Toolhouse Run ID:', toolhouseRunId);
+              
+              // Store the complete API response as JSON
+              const rawResponseJson = JSON.stringify(result);
+              console.log('Raw API Response:', result);
+              
+              // Prepare data for backend storage
+              const portfolioData = {
+                portfolio_name: result.data.portfolio_name || 'Custom Portfolio',
+                risk_level: result.data.risk_level || 'Moderate',
+                investment_amount: investmentAmount.toString(),
+                allocation: result.data.allocation || '',
+                response_json: result // Store the complete response JSON
+              };
+              
+              // Store the portfolio data in the backend
+              try {
+                // Make API call to store the data
+                console.log('Storing portfolio data in backend...');
+                fetch('http://localhost:8000/api/portfolios/store', {
+                  method: 'POST',
+                  headers: {
+                    'Content-Type': 'application/json',
+                  },
+                  body: JSON.stringify({
+                    portfolio_name: portfolioData.portfolio_name,
+                    risk_level: portfolioData.risk_level,
+                    investment_amount: portfolioData.investment_amount,
+                    allocation: portfolioData.allocation,
+                    response_json: portfolioData.response_json
+                  })
+                })
+                .then(response => response.json())
+                .then(data => {
+                  if (data.success) {
+                    console.log('Portfolio stored successfully with ID:', data.portfolio_id);
+                    
+                    // Store the portfolio ID in localStorage for retrieval
+                    localStorage.setItem('portfolioId', data.portfolio_id);
+                    
+                    // Store additional data in localStorage for the portfolio-details page
+                    localStorage.setItem('portfolioName', portfolioData.portfolio_name);
+                    localStorage.setItem('riskLevel', portfolioData.risk_level);
+                    localStorage.setItem('investmentAmount', portfolioData.investment_amount);
+                    localStorage.setItem('allocationData', portfolioData.allocation);
+                    localStorage.setItem('responseBody', JSON.stringify(result));
+                    
+                    // Navigate to the portfolio-details page
+                    window.location.href = `/portfolio-details`;
+                  } else {
+                    console.error('Failed to store portfolio:', data);
+                    alert('Error storing portfolio data. Please try again.');
+                  }
+                })
+                .catch(error => {
+                  console.error('Error storing portfolio data:', error);
+                  // Fallback: store minimal data in localStorage
+                  localStorage.setItem('portfolioName', portfolioData.portfolio_name);
+                  localStorage.setItem('investmentAmount', portfolioData.investment_amount);
+                  window.location.href = `/portfolio-details`;
+                });
+              } catch (error) {
+                console.error('Error in API call to store portfolio:', error);
+                // Fallback to a simpler navigation if API call fails
+                window.location.href = `/portfolio-details?amount=${encodeURIComponent(investmentAmount)}`;
+              }
             } else {
               console.error("Test API call failed:", result.message);
               console.error("Test API error:", result);
+              alert(`Error: ${result.message || 'Failed to process portfolio data'}`);
             }
           }
         } catch (error) {
@@ -528,51 +615,24 @@ export default function PortfolioOptionsPage() {
           </div>
         </div>
 
-        {/* Display API Response */}
-        {showApiResponse && apiResponse && (
-          <div className="mt-12 p-6 border rounded-lg bg-white dark:bg-gray-800 shadow-lg max-w-4xl mx-auto">
-            <h2 className="text-2xl font-bold mb-4">Toolhouse API Response</h2>
-            
-            <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-2">Selected Portfolio</h3>
-              <div className="grid grid-cols-2 gap-4 mb-4">
-                <div>
-                  <p className="font-medium">Portfolio Name:</p>
-                  <p className="text-gray-600 dark:text-gray-300">{apiResponse.data?.portfolio_name || "N/A"}</p>
-                </div>
-                <div>
-                  <p className="font-medium">Risk Level:</p>
-                  <p className="text-gray-600 dark:text-gray-300">{apiResponse.data?.risk_level || "N/A"}</p>
-                </div>
-                <div>
-                  <p className="font-medium">Investment Amount:</p>
-                  <p className="text-gray-600 dark:text-gray-300">${apiResponse.data?.investment_amount || "N/A"}</p>
-                </div>
-                <div>
-                  <p className="font-medium">Allocation:</p>
-                  <p className="text-gray-600 dark:text-gray-300">{apiResponse.data?.allocation || "N/A"}</p>
-                </div>
-              </div>
+        {/* Success message after API call */}
+      {showApiResponse && apiResponse && (
+        <div className="mt-8 text-center">
+          {apiResponse.success ? (
+            <div className="p-4 bg-green-100 dark:bg-green-900 rounded-lg inline-block">
+              <p className="text-green-700 dark:text-green-300 font-medium">
+                Portfolio submitted successfully!
+              </p>
             </div>
-            
-            <div className="mb-6">
-              <h3 className="text-xl font-semibold mb-2">API Call Details</h3>
-              <div className="bg-gray-100 dark:bg-gray-700 p-4 rounded-md">
-                <p className="font-medium">Status: <span className={apiResponse.success ? "text-green-600 dark:text-green-400" : "text-red-600 dark:text-red-400"}>
-                  {apiResponse.success ? "Success" : "Failed"}
-                </span></p>
-                <p className="font-medium">Message: <span className="text-gray-600 dark:text-gray-300">{apiResponse.message}</span></p>
-              </div>
+          ) : (
+            <div className="p-4 bg-red-100 dark:bg-red-900 rounded-lg inline-block">
+              <p className="text-red-700 dark:text-red-300 font-medium">
+                There was an issue submitting your portfolio. Please try again.
+              </p>
             </div>
-            
-            <div>
-              <h3 className="text-xl font-semibold mb-2">Raw Response</h3>
-              <pre className="bg-gray-100 dark:bg-gray-700 p-4 rounded-md overflow-auto max-h-60 text-sm">
-                {JSON.stringify(apiResponse, null, 2)}
-              </pre>
-            </div>
-          </div>
-        )}
+          )}
+        </div>
+      )}
 
         {/* Additional Info */}
         <div className="mt-12 text-center">

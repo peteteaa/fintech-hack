@@ -1,0 +1,9 @@
+{
+  "portfolio_name": "High Risk Portfolio",
+  "risk_level": "high",
+  "investment_amount": "100000",
+  "allocation": "70% Stocks, 10% Bonds, 15% Cryptocurrency, 5% ETFs",
+  "response_json": {
+    "raw_text": "Here's a breakdown of potential investments based on your portfolio allocation of $100,000:\n\n### 1. **Stocks (70% - $70,000)**\n   - **Top Performers**: \n     - **Nvidia (NVDA)**: Gained 167.5% recently.\n     - **Palantir (PLTR)**: Also performed well.\n   - **Source**: [Morningstar - Top-Performing Stocks of 2023](https://www.morningstar.com/stocks/top-performing-stocks-2023)\n\n### 2. **Bonds (10% - $10,000)**\n   - **Recommended Bond ETFs**:\n     - **Vanguard Ultra-Short Bond ETF (VUSB)**\n     - **DoubleLine Commercial Real Estate ETF (DCRE)**\n     - **iShares Intermediate Government/Credit Bond ETF (GVI)**\n   - **Source**: [US News - Best Bond ETFs to Buy for 2025](https://money.usnews.com/investing/articles/best-bond-etfs-to-buy-now)\n\n### 3. **Cryptocurrency (15% - $15,000)**\n   - **Top Cryptocurrencies**:\n     - **Bitcoin (BTC)**\n     - **Ethereum (ETH)**\n     - **Binance Coin (BNB)**\n     - **Solana (SOL)**\n   - **Source**: [Forbes - Top 10 Cryptocurrencies Of April 29, 2025](https://www.forbes.com/advisor/investing/cryptocurrency/top-10-cryptocurrencies/)\n\n### 4. **ETFs (5% - $5,000)**\n   - You can consider investing in a diversified ETF that tracks a broad market index, such as the **S&P 500 ETF (SPY)** or **Vanguard Total Stock Market ETF (VTI)**.\n\n### Summary of Investment Allocation:\n- **Stocks**: $70,000 in top-performing stocks like Nvidia and Palantir.\n- **Bonds**: $10,000 in recommended bond ETFs.\n- **Cryptocurrency**: $15,000 in major cryptocurrencies like Bitcoin and Ethereum.\n- **ETFs**: $5,000 in a diversified ETF.\n\nThis portfolio breakdown aligns with your specified allocation and includes some of the best-performing assets in each category."
+  }
+}
